@@ -9,7 +9,6 @@ import os
 # The function accepts INTEGER_ARRAY grades as parameter.
 #
 
-
 def gradingStudents(grades):
     # Write your code here
     final_grades = []
@@ -23,7 +22,6 @@ def gradingStudents(grades):
             else:
                 final_grades.append(grades[grade])
     return final_grades
-
 
 if __name__ == "__main__":
     fptr = open(os.environ["OUTPUT_PATH"], "w")
