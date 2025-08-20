@@ -12,8 +12,12 @@ import os
 #
 
 def designerPdfViewer(h, word):
-    weights = [h[ord(letter) - 97] for letter in word]
-    return max(weights) * len(word)
+    # Find the maximum height among all letters in the word
+    max_height = max(h[ord(char) - ord('a')] for char in word)
+    
+    # Width is the length of the word, height is the maximum letter height
+    # Area = width * height
+    return len(word) * max_height
 
 if __name__ == "__main__":
     fptr = open(os.environ["OUTPUT_PATH"], "w")
